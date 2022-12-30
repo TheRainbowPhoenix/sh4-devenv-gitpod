@@ -41,7 +41,7 @@ RUN apt-get -qq update && apt-get -qqy install make libmpc3 && apt-get -qqy clea
 
 USER root
 
-COPY compile /tmp
-RUN cd /tmp && /tmp/compile && rm -rf /tmp/compile
+COPY setup.sh /tmp
+RUN cd /tmp && /tmp/setup.sh && rm -rf /tmp/setup.sh
 
 # USER gitpod
