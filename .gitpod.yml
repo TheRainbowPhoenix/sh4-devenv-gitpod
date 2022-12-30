@@ -1,0 +1,8 @@
+image:
+  file: Dockerfile
+tasks:
+  - command: |
+      echo SOME_SECRET="secret" >> .env
+      pwd
+ports:
+  - port: 8000
